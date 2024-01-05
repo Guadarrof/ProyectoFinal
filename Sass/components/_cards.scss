@@ -1,0 +1,23 @@
+
+.small-card{
+    background-color: white;
+    border: none;
+    padding: $base-padding;
+    box-shadow: $base-shadow;
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    height: 400px;
+    .card-img{
+        align-items: center;
+        width: 200px;
+        height: 200px;
+    }
+    .h3{
+        font-size: $font-size-l;
+    }
+    .p{
+        font-size: $font-size-base;
+    }
+}
+
