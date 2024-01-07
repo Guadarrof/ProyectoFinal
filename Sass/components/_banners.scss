@@ -27,11 +27,11 @@
         text-shadow: $light-shadow;
     }
     &__p{
-        font-size: $font-size-l;
         background-color: $light-color;
+        font-size: $font-size-m;
         padding: $base-padding;
-        margin: $base-margin;
-        color: $primary-color;
+        box-shadow: $base-shadow;
+        width: 75%;
     }
     
 }
