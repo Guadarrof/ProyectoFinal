@@ -1,3 +1,3 @@
-@use 'reset';
-@use 'variables';
-@use 'typography';
+@use 'variables' as *;
+@use 'typography' as *;
+@use 'navbar' as *;
