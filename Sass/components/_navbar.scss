@@ -1,10 +1,11 @@
-@import '../base/typography';
-@import '../utils/variables';
+@use '../components/index';
+
 .navbar{
     display: flex;
-    justify-content: end;
-    margin: 0 2rem;
+    justify-content: flex-start;
     padding: 0.75rem;
+    height: 80px;
+    box-shadow: $base-shadow;
     &_h1{
         content: url(/Images/Logo.png);
     }
