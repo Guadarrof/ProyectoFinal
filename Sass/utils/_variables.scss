@@ -1,16 +1,29 @@
 // Document colors
 
 $primary-color:#FE5DAD;
-$primary-color-soft:lighten($primary-color, 15);
 $secondary-color:#015F68;
-$secondary-color-soft:lighten($secondary-color, 15);
 $tertiary-color:#FFE099;
 $highlight-color:#FF9505;
-$highlight-color-soft:lighten($highlight-color, 15);
 $light-color:#EFEFEF;
 $font-color:#011B1D;
 $alert-color:#FF2943;
 $success-color:#7EDEC9;
+
+
+//Color palette
+
+$colors:(
+    'primary':$primary-color,
+    'primary-light':lighten($primary-color, 15),
+    'secondary': $secondary-color,
+    'secondary-light':lighten($secondary-color, 15),
+    'tertiary':$tertiary-color,
+    'highlight':$highlight-color,
+    'highlight-soft':lighten($highlight-color, 15),
+    'light':$light-color,
+    'alert':$alert-color,
+    'success':$success-color
+)
 
 // Document Shadows
 
