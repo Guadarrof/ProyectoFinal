@@ -2,20 +2,26 @@
 
 .navbar{
     display: flex;
-    justify-content: flex-start;
-    padding: 0.75rem;
-    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 2rem;
+    height: 58px;
     box-shadow: $base-shadow;
     &_h1{
+        height: 45px;
         content: url(/Images/Logo.png);
     }
-    &_a{
-        font-size: $font-size-l;
+    &_pages{
+        font-size: $font-size-base;
+        a{
+            padding: 0.75rem;
+            &:nth-child(odd):hover{
+                @include hover-underline-orange;
+            }
+            &:nth-child(even):hover{
+                @include hover-underline-pink;
+            }
+        }
     }
 }
 
-// .navbar_h1
-
-// .navbar_a-visited {}
-
-// .navbar_a-hover{}

@@ -5,8 +5,14 @@
     color: inherit;
     margin: 0;
     box-sizing: border-box;
+    font-family: $primary-font;
 }
 
-*{
-    font-family: $primary-font;
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+a{
+    text-decoration: none;
 }
