@@ -1,6 +1,11 @@
-$primary-font: 'Fredoka', sans-serif;
+@font-face {
+    font-family:'CoolFont';
+    src: url(../../Fonts/CoolKids-Bold.otf);
+}
 
+$primary-font: 'Fredoka', sans-serif;
 $secondary-font: 'Lilita One', sans-serif;
+$cool-font: 'CoolFont', sans-serif;
 
 // Font scale 1.3 base 18 (1rem)
 

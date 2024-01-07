@@ -1,2 +1,37 @@
-// @use 'typography' as *;
-// @use 'variables' as*;
+@use './index';
+
+.banner{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    &-1{
+        background: linear-gradient(95deg, $primary-color, $highlight-color-soft);
+    }
+    &_img{
+       height: auto;
+       width: 35%;
+       margin: auto;
+    }
+    &_container-text{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    &__h1{
+        font-family: $cool-font;
+        font-size: $font-size-xxxl;
+        color: $success-color;
+        text-shadow: $light-shadow;
+    }
+    &__p{
+        font-size: $font-size-l;
+        background-color: $light-color;
+        padding: $base-padding;
+        margin: $base-margin;
+        color: $primary-color;
+    }
+    
+}
