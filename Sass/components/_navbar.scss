@@ -3,10 +3,17 @@
     justify-content: end;
     margin: 0 2rem;
     padding: 0.75rem;
-    img{
-        justify-self: left;
-    }
-    p{
-        font-size: $font-size-l;
-    }
+    
+        img{
+            justify-self: left;
+        }
+        p{
+            font-size: $font-size-l;
+        }
 }
+
+.navbar_h1
+
+.navbar_a-visited {}
+
+.navbar_a-hover{}
