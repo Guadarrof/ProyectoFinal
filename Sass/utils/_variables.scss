@@ -15,16 +15,16 @@ $success-color:#7EDEC9;
 //Color palette
 
 $colors:(
-    'primary':$primary-color,
-    'primary-light':lighten($primary-color, 15),
-    'secondary': $secondary-color,
-    'secondary-light':lighten($secondary-color, 15),
-    'tertiary':$tertiary-color,
-    'highlight':$highlight-color,
-    'highlight-soft':lighten($highlight-color, 15),
-    'light':$light-color,
-    'alert':$alert-color,
-    'success':$success-color
+    "primary":$primary-color,
+    "primary-light":lighten($primary-color, 15),
+    "secondary": $secondary-color,
+    "secondary-light":lighten($secondary-color, 15),
+    "tertiary":$tertiary-color,
+    "highlight":$highlight-color,
+    "highlight-soft":lighten($highlight-color, 15),
+    "light":$light-color,
+    "alert":$alert-color,
+    "success":$success-color
 );
 
 // Document Shadows
