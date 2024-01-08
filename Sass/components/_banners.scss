@@ -5,6 +5,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     &-1{
         background: linear-gradient(95deg, $primary-color, $highlight-color-soft);
     }
@@ -22,7 +23,7 @@
     }
     &__h1{
         font-family: $cool-font;
-        font-size: $font-size-xxxl;
+        font-size: $font-size-xxl;
         color: $success-color;
         text-shadow: $light-shadow;
     }

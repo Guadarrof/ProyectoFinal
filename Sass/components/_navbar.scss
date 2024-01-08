@@ -15,6 +15,7 @@
         font-size: $font-size-base;
         a{
             padding: 0.75rem;
+            color: $secondary-color;
             &:nth-child(odd):hover{
                 @include hover-underline-orange;
             }
@@ -22,6 +23,18 @@
                 @include hover-underline-pink;
             }
         }
+    }
+    &_icons{
+        display: flex;
+        flex-direction: row;
+    }
+    &__span-cart{
+        content: url(../../Images/shopIcon.svg);
+        padding: $base-padding;
+    }
+    &__span-search{
+        content: url(../../Images/searchIcon.svg);
+        padding: $base-padding;
     }
 }
 
