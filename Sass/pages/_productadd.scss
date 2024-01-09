@@ -1,2 +1,6 @@
-// @use 'variables' as *;
-// @use 'typography' as *;
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 20%;
+}

@@ -20,16 +20,87 @@ a {
   text-decoration: none;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+.form {
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+}
+.form_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_h2 {
+  font-family: "Lilita One", sans-serif;
+  color: #015F68;
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+.form__label {
+  margin: 0.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+.form__input {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+.form .age-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-group {
+  margin: 0.5rem;
+}
+.checkbox-group .form__input {
+  vertical-align: -webkit-baseline-middle;
+}
+
 @font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
 .banner {
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -106,6 +177,7 @@ a {
   font-size: 18px;
 }
 .navbar_pages a {
+  font-weight: 600;
   padding: 0.75rem;
   color: #015F68;
 }
@@ -136,4 +208,10 @@ a {
 .navbar__span-search {
   content: url(../../Images/searchIcon.svg);
   padding: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
 }/*# sourceMappingURL=main.css.map */
