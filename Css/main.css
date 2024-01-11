@@ -98,7 +98,7 @@ table {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
-.banner {
+.section-banner {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
@@ -106,6 +106,7 @@ table {
   flex-direction: row;
   align-items: center;
 }
+
 .banner-1 {
   background: linear-gradient(95deg, #FE5DAD, #ffb552);
 }
@@ -135,26 +136,57 @@ table {
   width: 75%;
 }
 
-.small-card {
+.cards_group {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 20%;
+}
+
+.img-container {
+  height: 200px;
+  width: 200px;
+}
+
+.card {
   background-color: white;
   border: none;
   padding: 1rem;
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+}
+.card-m {
   display: flex;
   flex-direction: column;
   width: 280px;
-  height: 400px;
+  height: 450px;
 }
-.small-card .card-img {
-  align-items: center;
-  width: 200px;
-  height: 200px;
+.card_text {
+  height: 40%;
+  margin-top: 1rem;
+  position: relative;
 }
-.small-card .h3 {
-  font-size: 30px;
+.card_img {
+  overflow: hidden;
+  margin: auto;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
 }
-.small-card .p {
+.card__h3 {
+  font-size: 23px;
+  margin-bottom: 0.5rem;
+}
+.card__p {
   font-size: 18px;
+}
+.card__a {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
 }
 
 @font-face {

@@ -1,24 +1,44 @@
+.cards_group{
+    display: flex;
+    justify-content: space-around;
+    margin: $base-margin 20%;
+}
 
+.img-container{
+    height: 200px;
+    width: 200px;
+}
 
-.small-card{
+.card{
     background-color: white;
     border: none;
     padding: $base-padding;
     box-shadow: $base-shadow;
+    margin: $base-margin;
+    &-m{
     display: flex;
     flex-direction: column;
     width: 280px;
-    height: 400px;
-    .card-img{
-        align-items: center;
-        width: 200px;
-        height: 200px;
+    height: 450px;
     }
-    .h3{
-        font-size: $font-size-l;
+    &_text{
+        height: 40%;
+        margin-top:$base-margin;
+        position: relative;
     }
-    .p{
+    &_img{
+        @include symetricImage;
+    }
+    &__h3{
+        font-size: $font-size-m;
+        margin-bottom: 0.5rem;
+    }
+    &__p{
         font-size: $font-size-base;
     }
+    &__a{
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+    }
 }
-

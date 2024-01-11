@@ -1,11 +1,14 @@
 @use './index';
 
-.banner{
+.section-banner{
     height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.banner{
     &-1{
         background: linear-gradient(95deg, $primary-color, $highlight-color-soft);
     }

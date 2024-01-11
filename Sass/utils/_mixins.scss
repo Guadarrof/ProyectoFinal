@@ -15,3 +15,13 @@
     background-size: 90% 18%;
     background-position-x:center;
 }
+
+@mixin symetricImage{
+    overflow: hidden;
+    margin: auto;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
