@@ -1,16 +1,8 @@
+
 .cards_group{
     display: flex;
     justify-content: space-around;
     margin: $base-margin 20%;
-}
-
-.section-cards{
-    &_h2{
-        margin-left: 3rem;
-        margin-top: 1.5rem;
-        font-family: $secondary-font;
-        color: $primary-color;
-    }
 }
 
 .img-container{

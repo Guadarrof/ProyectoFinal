@@ -1,6 +1,10 @@
-// @use 'typography' as *;
-// @use 'variables' as*;
+@use 'index';
 
-// .footer_a 
-// .footer_a-visited
-// .footer_a-hover
+.footer{
+    position: static;
+    width: 100vw;
+    margin-top: 3rem;
+    height: 300px;
+    background-color: $secondary-color;
+}
+

@@ -44,3 +44,14 @@
     }
 }
 
+.search_input{
+    display: flex;
+    align-items: center;
+    .searchbar{
+        height: 30px;
+        border: 2px solid $primary-color;
+        &:hover, :focus{
+            border: 2px solid $tertiray-color;
+        }
+    }
+}
