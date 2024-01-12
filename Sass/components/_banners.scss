@@ -11,12 +11,15 @@
 .banner{
     &-1{
         background: linear-gradient(95deg, $primary-color, $highlight-color-soft);
+        margin-top: 58px;
     }
+
     &_img{
        height: auto;
        width: 35%;
        margin: auto;
     }
+
     &_container-text{
         align-items: center;
         display: flex;
@@ -37,5 +40,5 @@
         box-shadow: $base-shadow;
         width: 75%;
     }
-    
+
 }

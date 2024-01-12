@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="navbar">
-            <h1 class="navbar_h1">Logo</h1>
+            <a href="./index.html" class="navbar_logo"></a>
             <div class="navbar_pages">
                 <a href="./nosotros.html" class="navbar__a navbar__a-visited navbar__a-hover">About us</a>
                 <a href="./contacto.html" class="navbar__a navbar__a-visited navbar__a-hover">Contact</a>
@@ -31,24 +31,24 @@
             <div class="form_content">
                 <h2 class="form_h2">Formulario de alta de producto:</h2>
                 <label for="name" class="form__label" id="label-name">Nombre</label>
-                <input type="text" class="form__input" name="name" id="name" placeholder="Nombre del juguete">
+                <input type="text" class="form__input" name="name" id="nameForm" placeholder="Nombre del juguete">
 
                 <label for="price" class="form__label" id="label-price">Percio</label>
-                <input type="number" class="form__input" name="price" id="price">
+                <input type="number" class="form__input" name="priceForm" id="price">
 
                 <div class="checkbox-group">
-                    <input type="checkbox" class=" form__input" name="stock" id="stock">
+                    <input type="checkbox" class=" form__input" name="stockForm" id="stock">
                     <label for="stock" class="form__label" id="label-stock">Stock</label>
                 </div>
 
                 <label for="brand" class="form__label" id="label-brand">Marca</label>
-                <input type="text" class="form__input" name="brand"="brand" id="brand" placeholder="Marca">
+                <input type="text" class="form__input" name="brand" id="brandForm" placeholder="Marca">
 
                 <label for="category" class="form__label" id="label-category">Categoria</label>
-                <input type="text" class="  form__input" name="category" id="category" placeholder="Categoria">
+                <input type="text" class="  form__input" name="category" id="categoryForm" placeholder="Categoria">
 
                 <label for="shortDescription" class="form__label" id="label-shortDescription">Descripcion Corta</label>
-                <textarea class="form__input" name="shortDescription" id="shortDescription" placeholder="Descripcion resumida"></textarea>
+                <textarea class="form__input" name="shortDescription" id="shortDescriptionForm" placeholder="Descripcion resumida"></textarea>
 
                 <label for="longDescription" class="form__label" id="label-longDescription">Descripcion Larga</label>
                 <textarea class="form__input" name="longDescription" id="longDescription" placeholder="Descripcion completa"></textarea>
@@ -59,12 +59,12 @@
                 </div>
                 <div class="age-group">
                     <label for="startAge" class="form__label" id="label-startAge">Edad Desde</label>
-                    <input type="number" class="form__input" name="startAge" id="startAge">
+                    <input type="number" class="form__input" name="startAge" id="startAgeForm">
                     <label for="endAge" class="form__label" id="label-endAge">Edad Hasta</label>
-                    <input type="number" class="form__input" name="endAge" id="endAge">    
+                    <input type="number" class="form__input" name="endAge" id="endAgeForm">    
                 </div>
                 <label for="picture" class="form__label" id="label-picture">Foto</label>
-                <input type="file" class="form__input" name="picture" id="picture">
+                <input type="file" class="form__input" name="picture" id="pictureForm">
             </div>
             <div class="form_button">
                 <button type="submit">Agregar</button>
@@ -72,7 +72,15 @@
         </form>
     </div>
 
+    <footer>
+        <div class="footer">
+            <p class="footer_p">Nombre</p>
+            <p class="footer_p">Direccion</p>
+            <a href="" class="footer_a footer_a-visited footer_a-hover">Nosotros</a>
+            <a href="" class="footer_a footer_a-visited footer_a-hover">Contacto</a>
+            <a href="" class="footer_a footer_a-visited footer_a-hover">Faq</a>
+        </div>
+    </footer>
 <script src="../JS/index.js"></script>
 </body>
-
 </html>

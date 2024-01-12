@@ -12,10 +12,9 @@
 <body>
     <header>
     <div class="navbar">
-        <h1 class="navbar_h1">Logo</h1>
+        <a href="./index.html" class="navbar_logo"></a>
         <div class="navbar_pages">
             <a href="./nosotros.html" class="navbar__a navbar__a-visited navbar__a-hover">About us</a>
-            <a href="./contacto.html" class="navbar__a navbar__a-visited navbar__a-hover">Contact</a>
             <a href="./alta.html" class="navbar__a navbar__a-visited navbar__a-hover">Add products</a>
         </div>
         <div class="navbar_icons">
@@ -23,6 +22,24 @@
             <span class="navbar__span-search"></span>
         </div>
     </div>
-    </header>    
+    </header>   
+    <div class="form-container">
+        <form action="submit" class="form">
+            <div class="form_content">
+                <h2 class="form_h2">Dejanos tu consulta</h2>
+                <label for="name" class="form__label" id="label-name">Nombre</label>
+                <input type="text" class="form__input" name="name" id="nameContact" placeholder="Indica tu nombre">
+
+                <label for="email" class="form__label" id="label-email">email</label>
+                <input type="email" class="form__input" name="email" id="emailContact" placeholder="nombre@email.com">
+
+                <label for="msje" class="form__label" id="label-msje">Deja tu mensaje</label>
+                <textarea class="form__input" name=msje" id="msjeContact" placeholder="Tu mensaje"></textarea>
+            </div>
+            <div class="form_button">
+                <button> Enviar </button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
