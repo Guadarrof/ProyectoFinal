@@ -2,6 +2,10 @@
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
 * {
   padding: 0;
   color: inherit;
@@ -55,8 +59,16 @@ table {
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
 @font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+@font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
 }
 .form {
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
@@ -68,7 +80,7 @@ table {
   justify-content: center;
 }
 .form_h2 {
-  font-family: "Lilita One", sans-serif;
+  font-family: "Bebas Neue";
   color: #015F68;
   margin-bottom: 1rem;
   font-size: 30px;
@@ -98,15 +110,10 @@ table {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
 }
-.section-banner {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
 }
-
 .banner-1 {
   background: linear-gradient(95deg, #FE5DAD, #ffb552);
   margin-top: 58px;
@@ -137,17 +144,47 @@ table {
   width: 75%;
 }
 
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.btn {
+  padding: 1rem 4.5rem;
+  margin: 1rem auto;
+  border: none;
+  font-family: "Bebas Neue";
+  font-size: 23px;
+  font-weight: 600;
+}
+.btn_primary {
+  color: #015F68;
+  background-color: white;
+  border: 2px solid #015F68;
+}
+.btn_primary:hover {
+  color: white;
+  background-color: #015F68;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_secondary {
+  color: white;
+  background-color: #015F68;
+  border: 2px solid white;
+}
+.btn_secondary:hover {
+  color: #015F68;
+  background-color: white;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
 .cards_group {
   display: flex;
   justify-content: space-around;
   margin: 1rem 20%;
-}
-
-.section-cards_h2 {
-  margin-left: 3rem;
-  margin-top: 1.5rem;
-  font-family: "Lilita One", sans-serif;
-  color: #FE5DAD;
 }
 
 .img-container {
@@ -187,7 +224,7 @@ table {
 .card__h3 {
   font-size: 23px;
   margin-bottom: 0.5rem;
-  font-family: "Lilita One", sans-serif;
+  font-family: "Bebas Neue";
   color: #015F68;
 }
 .card__p {
@@ -204,6 +241,27 @@ table {
 @font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  margin-top: 3rem;
+  height: 300px;
+  background-color: #015F68;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
 }
 .navbar {
   display: flex;
@@ -257,6 +315,43 @@ table {
 .navbar__span-search {
   content: url(../../Images/searchIcon.svg);
   padding: 1rem;
+}
+
+.search_input {
+  display: flex;
+  align-items: center;
+}
+.search_input .searchbar {
+  height: 30px;
+}
+
+@font-face {
+  font-family: "CoolFont";
+  src: url(../../Fonts/CoolKids-Bold.otf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url();
+}
+.section-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-cards_h2 {
+  margin-left: 6rem;
+  margin-top: 3.5rem;
+  font-family: "Bebas Neue";
+  color: #FE5DAD;
+  font-size: 30px;
+}
+
+.section-banner {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .form-container {
