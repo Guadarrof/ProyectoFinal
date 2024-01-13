@@ -25,7 +25,6 @@
 
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 a {
@@ -251,12 +250,102 @@ table {
   font-family: "Bebas Neue";
   src: url();
 }
-.footer {
+footer {
   position: static;
   width: 100vw;
   margin-top: 3rem;
   height: 300px;
   background-color: #015F68;
+  padding: 3rem 6rem;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.footer_div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  color: white;
+  margin-right: 1rem;
+}
+.footer_div-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer_h3 {
+  font-size: 23px;
+  margin-bottom: 1rem;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+  transition: margin-right 2s ease-in-out;
+  background-image: url("../../Images/pink_underline.png");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 90% 18%;
+  background-position-x: center;
+}
+.footer__logo {
+  content: url(../../Images/Logo.png);
+  width: 80%;
+  margin: 1rem;
+}
+.footer_email, .footer_phone {
+  display: inline-flex;
+  align-items: center;
+}
+.footer__span {
+  margin-right: 10px;
+}
+.footer__span-email {
+  content: url(../../Images/emailIcon.svg);
+  width: 20px;
+  height: auto;
+}
+.footer__span-phone {
+  content: url(../../Images/whatsappon.svg);
+  width: 20px;
+  height: auto;
+}
+.footer_social {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__a {
+  color: white;
+  font-family: "Bebas Neue";
+}
+.footer__a-ig {
+  content: url(../../Images/instgramIcon.svg);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__a-fb {
+  content: url(../../Images/fbIcon.svg);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__a-tk {
+  content: url(../../Images/tiktokIcon.svg);
+  width: 20px;
+  height: auto;
+  margin: 1rem;
+}
+.footer__p {
+  color: white;
+}
+.footer_iframe {
+  border: 3px solid #FF9505 !important;
 }
 
 @font-face {

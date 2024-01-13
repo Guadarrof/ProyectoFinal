@@ -1,10 +1,95 @@
 @use 'index';
 
-.footer{
+footer{
     position: static;
     width: 100vw;
     margin-top: 3rem;
     height: 300px;
-    background-color: $secondary-color;
+    background-color: $secondary-color;  
+    padding: $padding-l $padding-xl;
 }
+.footer{
+    &_content{
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    }
+    &_div{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        color:white;
+        margin-right: $base-margin; 
+        &-logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;    
+        }
+    }
+    &_h3{
+        font-size: $font-size-m;
+        margin-bottom: $base-margin;
+        color: white;
+        width: fit-content;
+        padding-bottom: 0.5rem;
+        letter-spacing: 1px;
+        @include underline-pink;
+    }
 
+    &__logo{
+        content: url(../../Images/Logo.png);
+        width: 80%;
+        margin: $base-margin;
+    }
+    &_email, &_phone{
+        display: inline-flex;
+        align-items: center;
+    }
+    &__span{
+        margin-right: 10px;
+        &-email{
+            content: url(../../Images/emailIcon.svg);
+            width: 20px;
+            height: auto;
+        }
+        &-phone{
+            content: url(../../Images/whatsappon.svg);
+            width: 20px;
+            height: auto;
+        }
+    }
+    &_social{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+    &__a{
+        color: white;
+        font-family: $secondary-font;
+        &-ig{
+            content: url(../../Images/instgramIcon.svg);
+            width: 20px;
+            height: auto;
+            margin: $base-margin;
+        }
+        &-fb{
+            content: url(../../Images/fbIcon.svg);
+            width: 20px;
+            height: auto;
+            margin: $base-margin;
+        }
+        &-tk{
+            content: url(../../Images/tiktokIcon.svg);
+            width: 20px;
+            height: auto;
+            margin: $base-margin;
+        }
+    }
+    &__p{
+        color:white
+    }
+    &_iframe{
+        border: 3px solid $highlight-color !important;
+    }
+}

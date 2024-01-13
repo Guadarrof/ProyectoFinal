@@ -1,4 +1,4 @@
-@mixin hover-underline-orange(){
+@mixin underline-orange(){
     transition: margin-right 2s ease-in-out;;
     background-image:url('../../Images/orange_underline.png');
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
     background-position-x:center;
 }
 
-@mixin hover-underline-pink(){
+@mixin underline-pink(){
     transition: margin-right 2s ease-in-out;;
     background-image:url('../../Images/pink_underline.png');
     background-repeat: no-repeat;
