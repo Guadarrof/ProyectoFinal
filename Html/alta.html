@@ -11,7 +11,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../Css/main.css">
 </head>
-
 <body>
     <header>
         <div class="navbar">
@@ -26,51 +25,57 @@
             </div>
         </div>
     </header>
-    <div class="form-container">
-        <form action="submit" class="form">
-            <div class="form_content">
-                <h2 class="form_h2">Formulario de alta de producto:</h2>
-                <label for="name" class="form__label" id="label-name">Nombre</label>
-                <input type="text" class="form__input" name="name" id="nameForm" placeholder="Nombre del juguete">
+    <main>
+        <div class="form-container">
+            <form action="submit" class="form">
+                <div class="form_content">
+                    <h2 class="form_h2">Formulario de alta de producto:</h2>
+                    <label for="name" class="form__label" id="label-name">Nombre</label>
+                    <input type="text" class="form__input" name="name" id="nameForm" placeholder="Nombre del juguete">
 
-                <label for="price" class="form__label" id="label-price">Percio</label>
-                <input type="number" class="form__input" name="priceForm" id="price">
+                    <label for="price" class="form__label" id="label-price">Percio</label>
+                    <input type="number" class="form__input" name="priceForm" id="price">
 
-                <div class="checkbox-group">
-                    <input type="checkbox" class=" form__input" name="stockForm" id="stock">
-                    <label for="stock" class="form__label" id="label-stock">Stock</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class=" form__input" name="stockForm" id="stock">
+                        <label for="stock" class="form__label" id="label-stock">Stock</label>
+                    </div>
+
+                    <label for="brand" class="form__label" id="label-brand">Marca</label>
+                    <input type="text" class="form__input" name="brand" id="brandForm" placeholder="Marca">
+
+                    <label for="category" class="form__label" id="label-category">Categoria</label>
+                    <input type="text" class="  form__input" name="category" id="categoryForm" placeholder="Categoria">
+
+                    <label for="shortDescription" class="form__label" id="label-shortDescription">Descripcion
+                        Corta</label>
+                    <textarea class="form__input" name="shortDescription" id="shortDescriptionForm"
+                        placeholder="Descripcion resumida"></textarea>
+
+                    <label for="longDescription" class="form__label" id="label-longDescription">Descripcion
+                        Larga</label>
+                    <textarea class="form__input" name="longDescription" id="longDescription"
+                        placeholder="Descripcion completa"></textarea>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="form__input" name="delivery" id="delivery">
+                        <label for="delivery" class="form__label" id="label-delivery">Envio sin Cargo</label>
+                    </div>
+                    <div class="age-group">
+                        <label for="startAge" class="form__label" id="label-startAge">Edad Desde</label>
+                        <input type="number" class="form__input" name="startAge" id="startAgeForm">
+                        <label for="endAge" class="form__label" id="label-endAge">Edad Hasta</label>
+                        <input type="number" class="form__input" name="endAge" id="endAgeForm">
+                    </div>
+                    <label for="picture" class="form__label" id="label-picture">Foto</label>
+                    <input type="file" class="form__input" name="picture" id="pictureForm">
                 </div>
-
-                <label for="brand" class="form__label" id="label-brand">Marca</label>
-                <input type="text" class="form__input" name="brand" id="brandForm" placeholder="Marca">
-
-                <label for="category" class="form__label" id="label-category">Categoria</label>
-                <input type="text" class="  form__input" name="category" id="categoryForm" placeholder="Categoria">
-
-                <label for="shortDescription" class="form__label" id="label-shortDescription">Descripcion Corta</label>
-                <textarea class="form__input" name="shortDescription" id="shortDescriptionForm" placeholder="Descripcion resumida"></textarea>
-
-                <label for="longDescription" class="form__label" id="label-longDescription">Descripcion Larga</label>
-                <textarea class="form__input" name="longDescription" id="longDescription" placeholder="Descripcion completa"></textarea>
-
-                <div class="checkbox-group">
-                    <input type="checkbox" class="form__input" name="delivery" id="delivery">
-                    <label for="delivery" class="form__label" id="label-delivery">Envio sin Cargo</label>
+                <div class="form_button">
+                    <button type="submit">Agregar</button>
                 </div>
-                <div class="age-group">
-                    <label for="startAge" class="form__label" id="label-startAge">Edad Desde</label>
-                    <input type="number" class="form__input" name="startAge" id="startAgeForm">
-                    <label for="endAge" class="form__label" id="label-endAge">Edad Hasta</label>
-                    <input type="number" class="form__input" name="endAge" id="endAgeForm">    
-                </div>
-                <label for="picture" class="form__label" id="label-picture">Foto</label>
-                <input type="file" class="form__input" name="picture" id="pictureForm">
-            </div>
-            <div class="form_button">
-                <button type="submit">Agregar</button>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
     <footer>
         <div class="footer_content">
             <div class="footer_div footer_div-logo">
@@ -101,17 +106,21 @@
                     <a href="https://web.whatsapp.com/" class="footer__a">(221)456789</a>
                 </div>
             </div>
-            <div class="footer_div">
-                <h3 class="footer_h3">Seguinos en redes</h3>
+            <div class="footer_div footer_div-social">
+                <h3 class="footer_h3">Redes</h3>
                 <div class="footer_social">
                     <a href="https://www.instagram.com/" class="footer__a footer__a-ig"></a>
                     <a href="https://www.facebook.com/" class="footer__a footer__a-fb"></a>
                     <a href="https://www.tiktok.com/" class="footer__a footer__a-tk"></a>
                 </div>
             </div>
-            <iframe class="footer_iframe footer_iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.4687051553256!2d-57.9399814!3d-34.9197803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e622135a7231%3A0x987dcef7d90328d4!2sAv.%2060%20546%2C%20B1904%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sau!4v1705144184846!5m2!1ses!2sau" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="footer_iframe footer_iframe-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.4687051553256!2d-57.9399814!3d-34.9197803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e622135a7231%3A0x987dcef7d90328d4!2sAv.%2060%20546%2C%20B1904%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sau!4v1705144184846!5m2!1ses!2sau"
+                width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </footer> 
-<script src="../JS/index.js"></script>
+    </footer>
+    <script src="../JS/index.js"></script>
 </body>
+
 </html>

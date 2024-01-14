@@ -280,6 +280,10 @@ footer {
   text-align: center;
   margin-right: 3rem;
 }
+.footer_div-social {
+  display: flex;
+  align-items: center;
+}
 .footer_h3 {
   font-size: 23px;
   margin-bottom: 1rem;
@@ -322,6 +326,7 @@ footer {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .footer__a {
   color: white;
