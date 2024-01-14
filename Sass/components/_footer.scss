@@ -1,9 +1,8 @@
 @use 'index';
 
 footer{
-    position: static;
     width: 100vw;
-    margin-top: 3rem;
+    margin-top: auto;
     height: 300px;
     background-color: $secondary-color;  
     padding: $padding-l $padding-xl;
@@ -24,7 +23,8 @@ footer{
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;    
+            text-align: center;
+            margin-right: $margin-l;  
         }
     }
     &_h3{
@@ -45,6 +45,7 @@ footer{
     &_email, &_phone{
         display: inline-flex;
         align-items: center;
+        margin-bottom: $base-margin;
     }
     &__span{
         margin-right: 10px;
