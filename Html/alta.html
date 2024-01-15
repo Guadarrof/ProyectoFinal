@@ -27,51 +27,55 @@
     </header>
     <main>
         <div class="form-container">
-            <form action="submit" class="form">
+            <form action="submit" onsubmit="submitForm(event)" class="form">
                 <div class="form_content">
                     <h2 class="form_h2">Formulario de alta de producto:</h2>
-                    <label for="name" class="form__label" id="label-name">Nombre</label>
+                    <label for="nameForm" class="form__label" id="label-name">Nombre</label>
                     <input type="text" class="form__input" name="name" id="nameForm" placeholder="Nombre del juguete">
+                    <p id="nameError"></p>
 
-                    <label for="price" class="form__label" id="label-price">Percio</label>
-                    <input type="number" class="form__input" name="priceForm" id="price">
+                    <label for="priceForm" class="form__label" id="label-price">Precio</label>
+                    <input type="number" class="form__input" name="priceForm" id="priceForm">
+                    <p id="priceError"></p>
 
-                    <div class="checkbox-group">
-                        <input type="checkbox" class=" form__input" name="stockForm" id="stock">
-                        <label for="stock" class="form__label" id="label-stock">Stock</label>
-                    </div>
+                    <label for="stockForm" class="form__label" id="label-stock">Stock</label>
+                    <input type="text" class=" form__input" name="stockForm" id="stockForm">
+                    <p id="stockError"></p>
 
-                    <label for="brand" class="form__label" id="label-brand">Marca</label>
+                    <label for="brandForm" class="form__label" id="label-brand">Marca</label>
                     <input type="text" class="form__input" name="brand" id="brandForm" placeholder="Marca">
+                    <p id="brandError"></p>
 
-                    <label for="category" class="form__label" id="label-category">Categoria</label>
+                    <label for="categoryForm" class="form__label" id="label-category">Categoria</label>
                     <input type="text" class="  form__input" name="category" id="categoryForm" placeholder="Categoria">
+                    <p id="categoryError"></p>
 
-                    <label for="shortDescription" class="form__label" id="label-shortDescription">Descripcion
-                        Corta</label>
-                    <textarea class="form__input" name="shortDescription" id="shortDescriptionForm"
-                        placeholder="Descripcion resumida"></textarea>
+                    <label for="shortDescriptForm" class="form__label" id="label-shortDescription">Descripcion Corta</label>
+                    <textarea class="form__input" name="shortDescription" id="shortDescriptForm" placeholder="Descripcion resumida"></textarea>
+                    <p id="shortDescriptError"></p>
 
-                    <label for="longDescription" class="form__label" id="label-longDescription">Descripcion
-                        Larga</label>
-                    <textarea class="form__input" name="longDescription" id="longDescription"
+                    <label for="longDescriptForm" class="form__label" id="label-longDescription">Descripcion Larga</label>
+                    <textarea class="form__input" name="longDescription" id="longDescriptForm"
                         placeholder="Descripcion completa"></textarea>
 
                     <div class="checkbox-group">
-                        <input type="checkbox" class="form__input" name="delivery" id="delivery">
-                        <label for="delivery" class="form__label" id="label-delivery">Envio sin Cargo</label>
+                        <input type="checkbox" class="form__input" name="delivery" id="deliveryForm">
+                        <label for="deliveryForm" class="form__label" id="label-delivery">Envio sin Cargo</label>
                     </div>
                     <div class="age-group">
-                        <label for="startAge" class="form__label" id="label-startAge">Edad Desde</label>
+                        <label for="startAgeForm" class="form__label" id="label-startAge">Edad Desde</label>
                         <input type="number" class="form__input" name="startAge" id="startAgeForm">
-                        <label for="endAge" class="form__label" id="label-endAge">Edad Hasta</label>
+                        <p id="startAgeError"></p>
+
+                        <label for="endAgeForm" class="form__label" id="label-endAge">Edad Hasta</label>
                         <input type="number" class="form__input" name="endAge" id="endAgeForm">
+                        <p id="endAgeError"></p>
                     </div>
-                    <label for="picture" class="form__label" id="label-picture">Foto</label>
+                    <label for="pictureForm" class="form__label" id="label-picture">Foto</label>
                     <input type="file" class="form__input" name="picture" id="pictureForm">
                 </div>
                 <div class="form_button">
-                    <button type="submit">Agregar</button>
+                    <button class="btn_submit" type="submit">Agregar</button>
                 </div>
             </form>
         </div>
@@ -122,5 +126,4 @@
     </footer>
     <script src="../JS/index.js"></script>
 </body>
-
 </html>
