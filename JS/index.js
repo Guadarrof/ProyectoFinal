@@ -32,14 +32,14 @@ function stringLength(strg, minLength, maxLength){
     if (strg.length < minLength){
         return `Este campo requiere un minimo de ${minLength} caracteres`
     } else if (strg.length > maxLength){
-        return `Este campo tiene un maximo de ${maxLength} caracteres`
+        return `Este campo acepta un maximo de ${maxLength} caracteres`
     }else{
         return true
     }
 }
 
 function validNumber(num){
-    if (num >= 0){
+    if (parseInt(num) >= 0){
         return true;
     } else {
         return `Este campo solo acepta numeros mayores o iguales a 0`;
@@ -58,14 +58,8 @@ let integerNum = num => Number.isInteger(num)
 
 let validForm = true
 
-//Campos vacios
-
-
 //Name
 function validateName(){
-    // if (!requiredInput(formName)){
-    //     return
-    // }
     if (testStrings(formName.value)){
         let validLength= stringLength(formName.value, 2, 30)
         if (validLength===true){
@@ -78,9 +72,7 @@ function validateName(){
             nameError.style.display = "block";
             validForm = false;
         }
-    } else if(!requiredInput(formName)){
-        return
-    } else{
+    }else{
         formName.setAttribute('aria-invalid', 'true');
         nameError.innerText = "El siguiente campo solo acepta caracteres alfabeticos.";
         nameError.style.display = "block";
@@ -88,9 +80,12 @@ function validateName(){
     }
 }
 
+formName.addEventListener('change', cleanMessages)
+
 //Brand
 
 function validateBrand(){
+
     if (testStrings(formBrand.value)){
         let validLength= stringLength(formBrand.value, 2, 25)
         if (validLength===true){
@@ -138,7 +133,7 @@ function validateCategory(){
 
 function validateShortDescript(){
     if (testStrings(formShortDescription.value)){
-        let validLength= stringLength(formShortDescription.value, 2, 10)
+        let validLength= stringLength(formShortDescription.value, 15, 50)
         if (validLength===true){
             formShortDescription.setAttribute('aria-invalid', 'false');
             shortDescriptionError.innerText = "";
@@ -160,7 +155,7 @@ function validateShortDescript(){
 // Price
 
 function validatePrice(){
-    if(!validNumber(formPrice.value)){
+    if(!validNumber(formPrice)){
         formPrice.setAttribute('aria-invalid', 'true');
         priceError.innerText = validNumber;
         priceError.style.display = "block";
@@ -177,12 +172,13 @@ function validatePrice(){
 //Stock
 
 function validateStock(){
-    if(!validNumber(formStock.value)){
+    let stock= parseInt(formStock.value)
+    if(!validNumber(stock)){
         formStock.setAttribute('aria-invalid', 'true');
         stockError.innerText = validNumber;
         stockError.style.display = "block";
         validForm = false;
-    }else if(!integerNum(formStock.value)){
+    }else if(!integerNum(stock)){
         formStock.setAttribute('aria-invalid', 'true');
         stockError.innerText = `Este campo solo acepta numeros enteros`;
         stockError.style.display = "block";
@@ -196,7 +192,7 @@ function validateStock(){
 }
 
 function validateAge(){
-    let startAge = formStartAge.value
+    let startAge = parseInt(formStartAge.value)
     if(!validNumber(startAge)){
         formStartAge.setAttribute('aria-invalid', 'true');
         startAgeError.innerText = validNumber;
@@ -213,7 +209,7 @@ function validateAge(){
         startAgeError.style.display = "none";
         validForm = true;
     }
-    let endAge = formEndAge.value
+    let endAge = parseInt(formEndAge.value)
     if(!validNumber(endAge)){
         formEndAge.setAttribute('aria-invalid', 'true');
         endAgeError.innerText = validNumber;
@@ -224,7 +220,7 @@ function validateAge(){
         endAgeError.innerText = `Este campo solo acepta numeros enteros`;
         endAgeError.style.display = "block";
         validForm = false;
-    }else if (endAge<startAge){
+    }else if (endAge<=startAge){
         formEndAge.setAttribute('aria-invalid', 'true');
         endAgeError.innerText = "Debe ser un numero mayor a la edad minima";
         endAgeError.style.display = "block";
@@ -238,10 +234,8 @@ function validateAge(){
 }
 
 
-
 function submitForm(e){
     e.preventDefault()
-    validForm = true;
     validateName(validForm)
     validateBrand(validForm)
     validateCategory(validForm)
@@ -249,16 +243,17 @@ function submitForm(e){
     validatePrice(validForm)
     validateStock(validForm)
     validateAge(validForm)
+    validForm = true;
 
     if(validForm){
         const product={
-            name: toLowerCase(nameForm.value),
+            name: nameForm.value.toLowerCase,
             price: parseFloat(formPrice.value),
             stock: parseInt(formStock.value), 
-            brand: toLowerCase(formBrand.value),
-            category: toLowerCase(formCategory.value),
-            shortDescription: toLowerCase(formShortDescription.value),
-            longDescription: toLowerCase(formLongDescription.value),
+            brand: formBrand.value,
+            category: formCategory.value,
+            shortDescription: formShortDescription.value,
+            longDescription: formLongDescription.value,
             deliveryFree: formDeliveryChk.checked,
             startAge: formStartAge.value,
             endAge: formEndAge.value,
@@ -271,3 +266,11 @@ function submitForm(e){
 // function saveProduct(product){
 
 // }
+
+//Function to delete messages
+
+function cleanMessages(){
+    for (let i = 0; i < inputList.length; i++) {
+        inputList[i].innerText="";   
+     }
+}
