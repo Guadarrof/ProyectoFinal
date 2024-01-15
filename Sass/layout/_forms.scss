@@ -1,9 +1,14 @@
-@use "sass:math";
-@use "./index";
+
+@use './index';
 
 .form{
     box-shadow: $base-shadow;
     padding: 5% 10%;
+    &_container{
+        display: flex;
+        flex-direction: column;
+        padding: 5% 20%;
+    }
     &_content{
         display: flex;
         flex-direction: column;
@@ -16,23 +21,20 @@
         font-size: $font-size-l;
     }
     &__label{
-        margin: math.div($base-margin, 2);
+        margin-right: $margin-s;
+        margin-left: $margin-s;
+        margin-bottom: $margin-s;
+        margin-top: $margin-m;
         font-size: $font-size-base;
         font-weight: 600;   
     }
     &__input{
-        height: 40px;
-        margin-bottom: $base-margin;   
+        height: 40px;  
     }
-    .age-group{
-        display: flex;
-        flex-direction: row;
-    }
-}
 
-.checkbox-group{
-    margin: math.div($base-margin, 2);
-    .form__input{
-        vertical-align: -webkit-baseline-middle;
-    }
+    &_p{
+        color: $alert-color;
+        margin-top: 0;
+    }  
+
 }

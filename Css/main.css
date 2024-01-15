@@ -60,6 +60,12 @@ table {
   border-spacing: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
@@ -80,6 +86,11 @@ table {
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
   padding: 5% 10%;
 }
+.form_container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 20%;
+}
 .form_content {
   display: flex;
   flex-direction: column;
@@ -92,24 +103,19 @@ table {
   font-size: 30px;
 }
 .form__label {
-  margin: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
   font-size: 18px;
   font-weight: 600;
 }
 .form__input {
   height: 40px;
-  margin-bottom: 1rem;
 }
-.form .age-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.checkbox-group {
-  margin: 0.5rem;
-}
-.checkbox-group .form__input {
-  vertical-align: -webkit-baseline-middle;
+.form_p {
+  color: #FF2943;
+  margin-top: 0;
 }
 
 @font-face {
@@ -159,12 +165,19 @@ table {
   src: url();
 }
 .btn {
-  padding: 1rem 4.5rem;
-  margin: 1rem auto;
   border: none;
   font-family: "Bebas Neue";
-  font-size: 23px;
   font-weight: 600;
+  margin: 1rem auto;
+}
+.btn-l {
+  padding: 1rem 4.5rem;
+  font-size: 23px;
+}
+.btn-m {
+  padding: 1rem 3rem;
+  margin: 1rem auto;
+  font-size: 23px;
 }
 .btn_primary {
   color: #015F68;
@@ -176,15 +189,36 @@ table {
   background-color: #015F68;
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
-.btn_secondary {
+.btn_primary-inverse {
   color: white;
   background-color: #015F68;
   border: 2px solid #015F68;
 }
-.btn_secondary:hover {
+.btn_primary-inverse:hover {
   color: #015F68;
   background-color: white;
   border: 2px solid #015F68;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_secondary {
+  color: #FE5DAD;
+  background-color: white;
+  border: 2px solid #FE5DAD;
+}
+.btn_secondary:hover {
+  color: white;
+  background-color: #FE5DAD;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.btn_secondary-inverse {
+  color: white;
+  background-color: #FE5DAD;
+  border: 2px solid #FE5DAD;
+}
+.btn_secondary-inverse:hover {
+  color: #FE5DAD;
+  background-color: white;
+  border: 2px solid #FE5DAD;
   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -433,6 +467,24 @@ footer {
   border: 2px solid #FFE099;
 }
 
+input[type=checkbox] {
+  vertical-align: -webkit-baseline-middle;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.checkbox-group .form__label {
+  vertical-align: -webkit-baseline-middle;
+}
+
+input[type=checkbox]:checked {
+  accent-color: #FE5DAD !important;
+}
+
+input {
+  border: 2px solid #015F68;
+}
+
 @font-face {
   font-family: "CoolFont";
   src: url(../../Fonts/CoolKids-Bold.otf);
@@ -462,8 +514,26 @@ footer {
   flex-direction: row;
 }
 
-.form-container {
+.age_group {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  padding: 5% 20%;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.age_group-inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.age_group label {
+  margin-top: 0.5rem;
+}
+.age_group input {
+  height: 30px;
+}
+
+.checkbox-group {
+  margin: 0.5rem;
+  margin-top: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
