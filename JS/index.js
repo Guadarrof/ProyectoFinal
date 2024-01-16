@@ -23,227 +23,233 @@ let endAgeError = document.getElementById("endAgeError")
 let inputList=document.getElementsByTagName('input');
 
 
+const integerNum = num => Number.isInteger(parseInt(num));
+
 function testStrings(strg){
-    const regexp = new RegExp ("^[A-Za-z Ññ]+$")
-    return regexp.test(strg)
+    const regexp = new RegExp ("^[A-Za-zÑñ ]*$");
+    return (regexp.test(strg));
 }
 
+
 function stringLength(strg, minLength, maxLength){
-    if (strg.length < minLength){
-        return `Este campo requiere un minimo de ${minLength} caracteres`
-    } else if (strg.length > maxLength){
-        return `Este campo acepta un maximo de ${maxLength} caracteres`
+    if (strg.length < minLength || strg.length > maxLength){
+        return false;
     }else{
-        return true
+        return true;
     }
+}
+
+function requiredInput(strg){
+    if (strg.trim() ==''){
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function mostrarMensajeError(htmlElement,htmlElementMsg, msg)
+{
+    htmlElement.setAttribute('aria-invalid', 'true');
+    htmlElementMsg.innerText = msg;
+    htmlElementMsg.style.display = "block";
+    validForm = false;
+}
+
+function limpiarMensajeError(htmlElement,htmlElementMsg)
+{
+    htmlElement.setAttribute('aria-invalid', 'false');
+    htmlElementMsg.innerText = "";
+    htmlElementMsg.style.display = "none";
 }
 
 function validNumber(num){
-    if (parseInt(num) >= 0){
-        return true;
-    } else {
-        return `Este campo solo acepta numeros mayores o iguales a 0`;
+    const regexp = new RegExp ("^[0-9]+(?:[.,][0-9]+)?$"); 
+    if(regexp.test(num) && parseInt(num))
+    {
+        let n=parseInt(num);
+        if (n >= 0){
+           return true;
+        } else {
+            return false;
+        }
     }
+    else
+        return false;
 }
 
-function requiredInput(input){
-    if (input.value.trim() ==''){
-        return `El siguiente campo es requerido`
-    }else{
-        return true
-    }
-}
-
-let integerNum = num => Number.isInteger(num)
-
-let validForm = true
 
 //Name
-function validateName(){
-    if (testStrings(formName.value)){
-        let validLength= stringLength(formName.value, 2, 30)
-        if (validLength===true){
-            formName.setAttribute('aria-invalid', 'false');
-            nameError.innerText = "";
-            nameError.style.display = "none";
-        } else {
-            formName.setAttribute('aria-invalid', 'true');
-            nameError.innerText = validLength;
-            nameError.style.display = "block";
-            validForm = false;
+function validateName(strg){
+    if (testStrings(strg)){
+        if(requiredInput(strg)){        
+            if(stringLength(formName.value, 2, 30)){ 
+                limpiarMensajeError(formName,nameError);  
+            } else {
+                let mensaje="Este campo requiere entre 2 y 30 caracteres.";
+                mostrarMensajeError(formName,nameError,mensaje);
+            }
+        }
+        else
+        {
+            let mensaje="Este campo es Obligatorio.";
+            mostrarMensajeError(formName,nameError,mensaje);
         }
     }else{
-        formName.setAttribute('aria-invalid', 'true');
-        nameError.innerText = "El siguiente campo solo acepta caracteres alfabeticos.";
-        nameError.style.display = "block";
-        validForm = false;
+        let mensaje="El siguiente campo solo acepta caracteres alfabeticos.";
+        mostrarMensajeError(formName,nameError,mensaje);        
     }
 }
-
-formName.addEventListener('change', cleanMessages)
 
 //Brand
 
-function validateBrand(){
-
-    if (testStrings(formBrand.value)){
-        let validLength= stringLength(formBrand.value, 2, 25)
-        if (validLength===true){
-            formBrand.setAttribute('aria-invalid', 'false');
-            brandError.innerText = "";
-            brandError.style.display = "none";
-        } else {
-            formBrand.setAttribute('aria-invalid', 'true');
-            brandError.innerText = validLength;
-            brandError.style.display = "block";
-            validForm = false;
+function validateBrand(strg){
+    if (testStrings(strg)){
+        if(requiredInput(strg)){  
+            if(stringLength(strg, 2, 25)){
+                limpiarMensajeError(formBrand,brandError);  
+            } else {
+                let mensaje="Este campo requiere entre 2 y 25 caracteres.";
+                mostrarMensajeError(formBrand,brandError,mensaje);
+            }
+        }
+        else
+        {
+            let mensaje="Este campo es Obligatorio.";
+            mostrarMensajeError(formBrand,brandError,mensaje);
         }
     }else {
-        formBrand.setAttribute('aria-invalid', 'true');
-        brandError.innerText = "El siguiente campo solo acepta caracteres alfabeticos.";
-        brandError.style.display = "block";
-        validForm = false;
+        let mensaje="El siguiente campo solo acepta caracteres alfabeticos.";
+        mostrarMensajeError(formBrand,brandError,mensaje);    
     }
 }
 
 //Category
 
-function validateCategory(){
-    if (testStrings(formCategory.value)){
-        let validLength= stringLength(formCategory.value, 2, 10)
-        if (validLength===true){
-            formCategory.setAttribute('aria-invalid', 'false');
-            categoryError.innerText = "";
-            categoryError.style.display = "none";
-        } else {
-            formCategory.setAttribute('aria-invalid', 'true');
-            categoryError.innerText = validLength;
-            categoryError.style.display = "block";
-            validForm = false;
+function validateCategory(strg){
+    if (testStrings(strg)){
+        if(requiredInput(strg)){  
+            if(stringLength(strg, 2, 15)){
+                limpiarMensajeError(formCategory,categoryError);  
+            } else {
+                let mensaje="Este campo requiere entre 2 y 15 caracteres.";
+                mostrarMensajeError(formCategory,categoryError,mensaje);
+            }
+        }
+        else
+        {
+            let mensaje="Este campo es Obligatorio.";
+            mostrarMensajeError(formCategory,categoryError,mensaje);
         }
     }else {
-        formCategory.setAttribute('aria-invalid', 'true');
-        categoryError.innerText = "El siguiente campo solo acepta caracteres alfabeticos.";
-        categoryError.style.display = "block";
-        validForm = false;
+        let mensaje="El siguiente campo solo acepta caracteres alfabeticos.";
+        mostrarMensajeError(formCategory,categoryError,mensaje);    
     }
 }
 
 //ShortDescription
 
-function validateShortDescript(){
-    if (testStrings(formShortDescription.value)){
-        let validLength= stringLength(formShortDescription.value, 15, 50)
-        if (validLength===true){
-            formShortDescription.setAttribute('aria-invalid', 'false');
-            shortDescriptionError.innerText = "";
-            shortDescriptionError.style.display = "none";
-        } else {
-            formShortDescription.setAttribute('aria-invalid', 'true');
-            shortDescriptionError.innerText = validLength;
-            shortDescriptionError.style.display = "block";
-            validForm = false;
+function validateShortDescript(strg){
+    if (testStrings(strg)){
+        if(requiredInput(strg)){  
+            if(stringLength(strg, 10, 35)){
+                limpiarMensajeError(formShortDescription,shortDescriptionError);  
+            } else {
+                let mensaje="Este campo requiere entre 10 y 35 caracteres.";
+                mostrarMensajeError(formShortDescription,shortDescriptionError,mensaje);
+            }
+        }
+        else
+        {
+            let mensaje="Este campo es Obligatorio.";
+            mostrarMensajeError(formShortDescription,shortDescriptionError,mensaje);
         }
     }else {
-        formShortDescription.setAttribute('aria-invalid', 'true');
-        shortDescriptionError.innerText = "El siguiente campo solo acepta caracteres alfabeticos.";
-        shortDescriptionError.style.display = "block";
-        validForm = false;
+        let mensaje="El siguiente campo solo acepta caracteres alfabeticos.";
+        mostrarMensajeError(formShortDescription,shortDescriptionError,mensaje);    
     }
 }
 
 // Price
 
-function validatePrice(){
-    if(!validNumber(formPrice)){
-        formPrice.setAttribute('aria-invalid', 'true');
-        priceError.innerText = validNumber;
-        priceError.style.display = "block";
-        validForm = false;
-    }else{
-        formPrice.setAttribute('aria-invalid', 'false');
-        priceError.innerText = "";
-        priceError.style.display = "none";
-        validForm = true;
+function validatePrice(strg){
+    if(requiredInput(strg)){  
+        if(!validNumber(strg)){            
+            let mensaje="El precio debe ser numérico y positvo.";
+            mostrarMensajeError(formPrice,priceError,mensaje);    
+        }else{
+            limpiarMensajeError(formPrice,priceError); 
+        }
+    }
+    else
+    {
+        let mensaje="Este campo es Obligatorio.";
+        mostrarMensajeError(formPrice,priceError,mensaje);
     }
 }
-
 
 //Stock
 
-function validateStock(){
-    let stock= parseInt(formStock.value)
-    if(!validNumber(stock)){
-        formStock.setAttribute('aria-invalid', 'true');
-        stockError.innerText = validNumber;
-        stockError.style.display = "block";
-        validForm = false;
-    }else if(!integerNum(stock)){
-        formStock.setAttribute('aria-invalid', 'true');
-        stockError.innerText = `Este campo solo acepta numeros enteros`;
-        stockError.style.display = "block";
-        validForm = false;
-    }else{
-        formStock.setAttribute('aria-invalid', 'false');
-        stockError.innerText = "";
-        stockError.style.display = "none";
-        validForm = true;
+function validateStock(st){
+    if(requiredInput(st)){  
+        let stock= parseInt(st)
+        if(!validNumber(stock)){
+            let mensaje="El stock debe ser numérico y positvo.";
+            mostrarMensajeError(formStock,stockError,mensaje); 
+        }else if(!integerNum(stock)){
+            alert(integerNum(stock));
+            let mensaje=`Este campo solo acepta numeros enteros`;
+            mostrarMensajeError(formStock,stockError,mensaje);  
+        }else{
+            limpiarMensajeError(formStock,stockError); 
+        }
+    }
+    else
+    {
+        let mensaje="Este campo es Obligatorio.";
+        mostrarMensajeError(formStock,stockError,mensaje);
     }
 }
+
+//Age
 
 function validateAge(){
     let startAge = parseInt(formStartAge.value)
     if(!validNumber(startAge)){
-        formStartAge.setAttribute('aria-invalid', 'true');
-        startAgeError.innerText = validNumber;
-        startAgeError.style.display = "block";
-        validForm = false;
+        let mensaje="La edad debe ser un valor numérico.";
+        mostrarMensajeError(formStartAge,startAgeError,mensaje); 
     }else if(!integerNum(startAge)){
-        formStartAge.setAttribute('aria-invalid', 'true');
-        startAgeError.innerText = `Este campo solo acepta numeros enteros`;
-        startAgeError.style.display = "block";
-        validForm = false;
+        let mensaje=`Este campo solo acepta numeros enteros`;
+        mostrarMensajeError(formStartAge,startAgeError,mensaje);  
     }else{
-        formStartAge.setAttribute('aria-invalid', 'false');
-        startAgeError.innerText = "";
-        startAgeError.style.display = "none";
-        validForm = true;
+        limpiarMensajeError(formStartAge,startAgeError); 
     }
+
     let endAge = parseInt(formEndAge.value)
     if(!validNumber(endAge)){
-        formEndAge.setAttribute('aria-invalid', 'true');
-        endAgeError.innerText = validNumber;
-        endAgeError.style.display = "block";
-        validForm = false;
+        let mensaje="La edad debe ser un valor numérico.";
+        mostrarMensajeError(formEndAge,endAgeError,mensaje); 
     }else if(!integerNum(endAge)){
-        formEndAge.setAttribute('aria-invalid', 'true');
-        endAgeError.innerText = `Este campo solo acepta numeros enteros`;
-        endAgeError.style.display = "block";
-        validForm = false;
+        let mensaje="Este campo solo acepta numeros enteros";
+        mostrarMensajeError(formEndAge,endAgeError,mensaje);  
     }else if (endAge<=startAge){
-        formEndAge.setAttribute('aria-invalid', 'true');
-        endAgeError.innerText = "Debe ser un numero mayor a la edad minima";
-        endAgeError.style.display = "block";
-        validForm = false;
+        let mensaje= "Debe ser un numero mayor a la edad minima";
+        mostrarMensajeError(formEndAge,endAgeError,mensaje);  
     }else{
-        formEndAge.setAttribute('aria-invalid', 'false');
-        endAgeError.innerText = "";
-        endAgeError.style.display = "none";
-        validForm = true;
+        limpiarMensajeError(formEndAge,endAgeError); 
     }
 }
 
+//Submit form
 
 function submitForm(e){
-    e.preventDefault()
-    validateName(validForm)
-    validateBrand(validForm)
-    validateCategory(validForm)
-    validateShortDescript(validForm)
-    validatePrice(validForm)
-    validateStock(validForm)
-    validateAge(validForm)
-    validForm = true;
+    e.preventDefault();
+    validateName(formName.value);
+    validateBrand(formBrand.value);
+    validateCategory(formCategory.value);
+    validateShortDescript(formShortDescription.value);
+    validatePrice(formPrice.value);
+    validateStock(formStock.value);
+    validateAge();
 
     if(validForm){
         const product={
@@ -259,18 +265,10 @@ function submitForm(e){
             endAge: formEndAge.value,
             photo:formPicture.value,
         }
-        return product
+        return product;
     }
 }
 
-// function saveProduct(product){
+function saveProduct(product){
 
-// }
-
-//Function to delete messages
-
-function cleanMessages(){
-    for (let i = 0; i < inputList.length; i++) {
-        inputList[i].innerText="";   
-     }
 }
