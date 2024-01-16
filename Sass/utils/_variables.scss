@@ -10,6 +10,7 @@ $light-color:#EFEFEF;
 $font-color:#011B1D;
 $alert-color:#FF2943;
 $success-color:#7EDEC9;
+$success-color-light:lighten($success-color, 20);
 
 // Document Shadows
 $pink-shadow: -2px 3px $primary-color;

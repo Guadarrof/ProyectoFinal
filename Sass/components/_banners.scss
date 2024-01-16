@@ -1,8 +1,10 @@
 @use './index';
 
 .banner{
+    height: 50%;
     &-1{
-        background: linear-gradient(95deg, $primary-color, $highlight-color-soft);
+        flex-direction: row;
+        background: linear-gradient(180deg, $primary-color, white);
         margin-top: 58px;
     }
 
@@ -32,5 +34,89 @@
         box-shadow: $base-shadow;
         width: 75%;
     }
-
+    &-2{
+        background: linear-gradient(360deg, $success-color, white);
+        padding-bottom: $padding-l;
+        margin-top: $margin-l;
+        display: flex;
+        flex-direction: column;
+        .offer{
+            &_container{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: $base-margin 20%;
+            }
+            &_group{
+                height: 500;
+                width: 460;
+                box-shadow: none;
+            }
+            &_h2{
+                font-family: $secondary-font;
+                color: $secondary-color;
+                margin-left: $margin-xl;
+                padding-top: 2.5rem;
+                font-size: $font-size-l;
+                width: fit-content;
+                @include underline-pink;
+                padding-bottom: 10px;
+            }
+            &__img{
+                position: absolute;
+                &-1{
+                    width: 286px;
+                    height: 340px;
+                    left: 5px;
+                    top: 40px;
+                }
+                &-2{
+                    width: 299px;
+                    height: 267px;
+                    left: -20px;
+                    top: 95px;
+                }
+                &-3{
+                    width: 300px;
+                    height: 321px;
+                    left: -25px;
+                    top: 55px;
+                }
+            }
+            &__p{
+                font-size: $font-size-m;
+                font-weight: 600;
+                font-variant: small-caps;
+                text-align: center;
+            }
+        }
+        .img{
+            &-group{
+            position: relative;
+            height: 438px;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: $margin-m;
+            margin-bottom: 0;
+            }
+            &-background{
+                border-radius: 20px;
+                box-shadow: $base-shadow;
+                height: 350px;
+                width: 200px;
+                &-1{
+                    background-color: $highlight-color;
+                }
+                &-2{
+                    background-color: $primary-color;
+                }
+                &-3{
+                    background-color: $tertiary-color;
+                }
+            }
+        }
+    }
 }

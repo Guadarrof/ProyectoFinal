@@ -1,6 +1,6 @@
 @mixin underline-orange(){
     transition: margin-right 2s ease-in-out;;
-    background-image:url('../../Images/orange_underline.png');
+    background-image:url('../../Images/orange_underline.svg');
     background-repeat: no-repeat;
     background-size: 90% 18%;
     background-position-y:bottom;
@@ -9,7 +9,16 @@
 
 @mixin underline-pink(){
     transition: margin-right 2s ease-in-out;;
-    background-image:url('../../Images/pink_underline.png');
+    background-image:url('../../Images/pink_underline.svg');
+    background-repeat: no-repeat;
+    background-position-y:bottom;
+    background-size: 90% 18%;
+    background-position-x:center;
+}
+
+@mixin underline-secondary(){
+    transition: margin-right 2s ease-in-out;
+    background-image:url('../../Images/secondunder.svg');
     background-repeat: no-repeat;
     background-position-y:bottom;
     background-size: 90% 18%;
