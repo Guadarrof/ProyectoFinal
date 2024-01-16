@@ -772,4 +772,10 @@ textarea {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+.moreOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
