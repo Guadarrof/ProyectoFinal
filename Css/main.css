@@ -639,7 +639,7 @@ textarea {
 .about_card {
   display: flex;
   flex-direction: column;
-  background-color: rgba(247, 255, 253, 0.6588235294);
+  background-color: rgba(247, 255, 253, 0.8392156863);
   justify-content: space-between;
   padding: 3rem;
 }

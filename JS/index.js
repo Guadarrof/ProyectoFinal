@@ -265,10 +265,15 @@ function submitForm(e){
             endAge: formEndAge.value,
             photo:formPicture.value,
         }
-        return product;
     }
 }
 
-function saveProduct(product){
+let addBtn=document.getElementById("btnAddProduct");
 
-}
+addBtn.addEventListener('click', submitForm)
+
+
+
+// function saveProduct(product){
+
+// }
