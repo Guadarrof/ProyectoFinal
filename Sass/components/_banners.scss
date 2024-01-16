@@ -4,7 +4,7 @@
     height: 50%;
     &-1{
         flex-direction: row;
-        background: linear-gradient(180deg, $primary-color, white);
+        background: linear-gradient(180deg, $primary-color, $white);
         margin-top: 58px;
     }
 
@@ -35,7 +35,7 @@
         width: 75%;
     }
     &-2{
-        background: linear-gradient(360deg, $success-color, white);
+        background: linear-gradient(360deg, $success-color, $white);
         padding-bottom: $padding-l;
         margin-top: $margin-l;
         display: flex;

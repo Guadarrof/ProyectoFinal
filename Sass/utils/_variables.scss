@@ -10,13 +10,14 @@ $light-color:#EFEFEF;
 $font-color:#011B1D;
 $alert-color:#FF2943;
 $success-color:#7EDEC9;
+$white:#f7fffd;
 $success-color-light:lighten($success-color, 20);
 
 // Document Shadows
 $pink-shadow: -2px 3px $primary-color;
 $orange-shadow: -2px 3px $secondary-color;
 $base-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
-$light-shadow:-1px 4px 0px white;
+$light-shadow:-1px 4px 0px $white;
 
 // Padding
 

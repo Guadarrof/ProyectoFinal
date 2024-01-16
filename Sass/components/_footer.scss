@@ -17,7 +17,7 @@ footer{
         display: flex;
         flex-direction: column;
         width: 30%;
-        color:white;
+        color:$white;
         margin-right: $base-margin; 
         &-logo{
             display: flex;
@@ -34,7 +34,7 @@ footer{
     &_h3{
         font-size: $font-size-m;
         margin-bottom: $base-margin;
-        color: white;
+        color: $white;
         width: fit-content;
         padding-bottom: 0.5rem;
         letter-spacing: 1px;
@@ -52,7 +52,6 @@ footer{
         margin-bottom: $base-margin;
     }
     &__span{
-        margin-right: 10px;
         &-email{
             content: url(../../Images/emailIcon.svg);
             width: 20px;
@@ -71,7 +70,7 @@ footer{
         justify-content: center; 
     }
     &__a{
-        color: white;
+        color: $white;
         font-family: $secondary-font;
         &-ig{
             content: url(../../Images/instgramIcon.svg);
@@ -93,7 +92,7 @@ footer{
         }
     }
     &__p{
-        color:white
+        color:$white
     }
     &_iframe{
         border: 3px solid $highlight-color !important;

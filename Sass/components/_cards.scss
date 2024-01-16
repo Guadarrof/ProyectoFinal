@@ -11,7 +11,7 @@
 }
 
 .card{
-    background-color: white;
+    background-color: $white;
     border: none;
     padding: $base-padding;
     box-shadow: $base-shadow;
@@ -21,6 +21,15 @@
     flex-direction: column;
     width: 280px;
     height: 450px;
+    }
+    &-l{
+        box-shadow: $base-shadow;
+        padding: 5% 10%;
+        margin: $margin-xl;
+        display: flex;
+        flex-direction: row;
+        width: 760px;
+        height: 380px;
     }
     &_text{
         height: 40%;
