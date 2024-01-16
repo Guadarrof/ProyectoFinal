@@ -1,3 +1,7 @@
+@use './index';
 
-// @use 'variables' as *;
-// @use 'typography' as *;
+.form_button-contact{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

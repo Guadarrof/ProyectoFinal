@@ -24,3 +24,10 @@
     margin: $margin-s;
     margin-top: $margin-m;
 }
+
+.form_button-add{
+    margin: auto;
+    margin-top: $margin-m;
+    display: flex;
+    justify-content: center;
+}

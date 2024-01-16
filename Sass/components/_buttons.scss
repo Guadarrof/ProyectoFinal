@@ -11,8 +11,11 @@
     }
     &-m{
         padding: $base-padding 3rem;
-        margin: $base-margin auto;
         font-size: $font-size-m;
+    }
+    &-s{
+        padding: $base-padding 2rem;
+        font-size: $font-size-base;
     }
     &_primary{
         color: $secondary-color;

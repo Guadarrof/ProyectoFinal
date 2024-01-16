@@ -6,6 +6,7 @@
         flex-direction: row;
         background: linear-gradient(180deg, $primary-color, $white);
         margin-top: 58px;
+        padding-top: $padding-l;
     }
 
     &_img{

@@ -53,14 +53,16 @@ footer{
     }
     &__span{
         &-email{
-            content: url(../../Images/emailIcon.svg);
+            content: url(../../Images/email.png);
             width: 20px;
             height: auto;
+            margin-right: 6px;
         }
         &-phone{
-            content: url(../../Images/whatsappon.svg);
+            content: url(../../Images/whappIcon.png);
             width: 20px;
             height: auto;
+            margin-right: 6px;
         }
     }
     &_social{
@@ -73,19 +75,19 @@ footer{
         color: $white;
         font-family: $secondary-font;
         &-ig{
-            content: url(../../Images/instgramIcon.svg);
+            content: url(../../Images/ig.png);
             width: 20px;
             height: auto;
             margin: $base-margin;
         }
         &-fb{
-            content: url(../../Images/fbIcon.svg);
+            content: url(../../Images/fb.png);
             width: 20px;
             height: auto;
             margin: $base-margin;
         }
         &-tk{
-            content: url(../../Images/tiktokIcon.svg);
+            content: url(../../Images/tiktok.png);
             width: 20px;
             height: auto;
             margin: $base-margin;
