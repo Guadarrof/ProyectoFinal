@@ -13,6 +13,10 @@
         font-size: $font-size-l;
         @include underline-secondary;
         padding-bottom: 8px;
+        @media screen and (max-width: $breakpoint-s) {
+           margin: auto;
+           margin-top: 3.5rem;
+        }
     }
 }
 
@@ -20,4 +24,11 @@
     height: fit-content;
     width: 100%;
     display: flex;
+}
+
+
+.btn-offers{
+    @media screen and (max-width: $breakpoint-m) {
+        margin-top: 3rem;
+    }
 }

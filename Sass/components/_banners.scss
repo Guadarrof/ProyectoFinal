@@ -1,6 +1,7 @@
 @use './index';
 
 .banner{
+    width: 100vw;
     height: 50%;
     &-1{
         flex-direction: row;
@@ -13,6 +14,9 @@
        height: auto;
        width: 35%;
        margin: auto;
+       @media screen and (max-width: $breakpoint-s) {
+        display: none;
+      }
     }
 
     &_container-text{
@@ -27,6 +31,9 @@
         font-size: $font-size-xxl;
         color: $success-color;
         text-shadow: $light-shadow;
+        @media screen and (max-width: $breakpoint-l) {
+            font-size: $font-size-xl;    
+        } 
     }
     &__p{
         background-color: $light-color;
@@ -34,6 +41,16 @@
         padding: $base-padding;
         box-shadow: $base-shadow;
         width: 75%;
+        @media screen and (max-width: $breakpoint-l) {
+            font-size: $font-size-base;    
+        }
+        @media screen and (max-width: $breakpoint-m) {
+            margin-top: $margin-m;
+            margin-bottom: $margin-m;  
+        }
+        @media screen and (max-width: $breakpoint-s) {
+            display: none;
+        }
     }
     &-2{
         background: linear-gradient(360deg, $success-color, $white);
@@ -48,6 +65,11 @@
                 flex-direction: row;
                 justify-content: space-around;
                 margin: $base-margin 20%;
+                @media screen and (max-width: $breakpoint-m) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
             &_group{
                 height: 500;
@@ -63,6 +85,9 @@
                 width: fit-content;
                 @include underline-pink;
                 padding-bottom: 10px;
+                @media screen and (max-width: $breakpoint-s) {
+                    margin: auto;
+                }
             }
             &__img{
                 position: absolute;
@@ -90,6 +115,12 @@
                 font-weight: 600;
                 font-variant: small-caps;
                 text-align: center;
+                @media screen and (max-width: $breakpoint-s) {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin-right: $margin-m;
+                }
             }
         }
         .img{
@@ -102,6 +133,9 @@
             align-items: center;
             margin: $margin-m;
             margin-bottom: 0;
+            @media screen and (max-width: $breakpoint-s) {
+                display: none;
+            }
             }
             &-background{
                 border-radius: 20px;
