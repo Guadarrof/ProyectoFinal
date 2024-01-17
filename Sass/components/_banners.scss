@@ -65,7 +65,7 @@
                 flex-direction: row;
                 justify-content: space-around;
                 margin: $base-margin 20%;
-                @media screen and (max-width: $breakpoint-m) {
+                @media screen and (max-width: $breakpoint-l) {
                     display: flex;
                     flex-direction: column;
                     align-items: center;

@@ -6,6 +6,11 @@ footer{
     height: 300px;
     background-color: $secondary-color;  
     padding: $padding-l $padding-xl;
+    @media screen and (max-width: $breakpoint-s) {
+        height: 200px;
+        padding: $padding-m $padding-l;
+    }
+    
 }
 .footer{
     &_content{
@@ -24,7 +29,10 @@ footer{
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-right: $margin-l;  
+            margin-right: $margin-l;
+            @media screen and (max-width: $breakpoint-m) {
+                display: none;
+            }  
         }
         &-social{
             display: flex;
@@ -39,6 +47,10 @@ footer{
         padding-bottom: 0.5rem;
         letter-spacing: 1px;
         @include underline-pink;
+        @media screen and (max-width: $breakpoint-s) {
+            font-size: $font-size-base;
+            font-weight: 600;
+        }
     }
 
     &__logo{
@@ -57,23 +69,35 @@ footer{
             width: 20px;
             height: auto;
             margin-right: 6px;
+            @media screen and (max-width: $breakpoint-s) {
+                display: none;
+            }
         }
         &-phone{
             content: url(../../Images/whappIcon.png);
             width: 20px;
             height: auto;
             margin-right: 6px;
+            @media screen and (max-width: $breakpoint-s) {
+                display: none;
+            }
         }
     }
     &_social{
         display: inline-flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
+        @media screen and (max-width: $breakpoint-l) {
+            flex-direction: column;
+        }
     }
     &__a{
         color: $white;
         font-family: $secondary-font;
+        @media screen and (max-width: $breakpoint-s) {
+            display: none;
+        }
         &-ig{
             content: url(../../Images/ig.png);
             width: 20px;
@@ -98,5 +122,8 @@ footer{
     }
     &_iframe{
         border: 3px solid $highlight-color !important;
+        @media screen and (max-width: $breakpoint-l) {
+            display: none;
+        }
     }
 }
