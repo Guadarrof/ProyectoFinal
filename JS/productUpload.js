@@ -64,7 +64,7 @@ function limpiarMensajeError(htmlElement,htmlElementMsg)
 
 function validNumber(num){
     const regexp = new RegExp ("^[0-9]+(?:[.,][0-9]+)?$"); 
-    if(regexp.test(num) && parseInt(num))
+    if(regexp.test(num) && !isNaN(parseInt(num)))
     {
         let n=parseInt(num);
         if (n >= 0){
@@ -242,6 +242,7 @@ function validateAge(){
 //Submit form
 
 function submitForm(e){
+    validForm=true;
     e.preventDefault();
     validateName(formName.value);
     validateBrand(formBrand.value);
@@ -253,27 +254,63 @@ function submitForm(e){
 
     if(validForm){
         const product={
-            name: nameForm.value.toLowerCase,
+            name: nameForm.value.toLowerCase(),
             price: parseFloat(formPrice.value),
             stock: parseInt(formStock.value), 
-            brand: formBrand.value,
-            category: formCategory.value,
-            shortDescription: formShortDescription.value,
+            brand: formBrand.value.toLowerCase(),
+            category: formCategory.value.toLowerCase(),
+            shortDescription: formShortDescription.value.toLowerCase(),
             longDescription: formLongDescription.value,
             deliveryFree: formDeliveryChk.checked,
             startAge: formStartAge.value,
             endAge: formEndAge.value,
             photo:formPicture.value,
         }
+        saveProduct(product);
     }
 }
 
 let addBtn=document.getElementById("btnAddProduct");
 
-addBtn.addEventListener('click', submitForm)
+addBtn.addEventListener('click', submitForm);
 
 
+function cleanForm(){
+    let textareaCollection=document.getElementsByTagName("textarea");
+    for (let index = 0; index < inputList.length; index++) {
+        inputList[index].value="";
+    }
+    for (let index = 0; index < textareaCollection.length; index++) {
+        textareaCollection[index].value="";
+    }
+    formDeliveryChk.checked=false;
+}
 
-// function saveProduct(product){
 
+function saveProduct(product){
+    var allProducts;
+    if(localStorage.getItem('products')){
+        allProducts= JSON.parse(localStorage.getItem('products'));
+    }
+    else{
+        allProducts=[];
+    }
+    allProducts.push(product);
+
+    localStorage.setItem('products', JSON.stringify(allProducts));
+
+    console.log(JSON.parse(localStorage.getItem('products')));
+
+    alert("El producto ha sido agregado con exito....");
+    cleanForm();
+}
+
+// const toys={
+//     constructor(name, price, brand, shortDescription, longDescription){
+//         name=this.name;
+//         price=this.price;
+//         brand=this.brand;
+//         shortDescription=this.shortDescription;
+//         longDescription=this.longDescription;
+//     }
 // }

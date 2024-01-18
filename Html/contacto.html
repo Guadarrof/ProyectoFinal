@@ -35,15 +35,19 @@
             <form action="submit" class="form">
                 <div class="form_content">
                     <h2 class="form_h2">Dejanos tu consulta</h2>
-                    <label for="name" class="form__label" id="label-name">Nombre</label>
+                    <label for="nameContact" class="form__label" id="label-name">Nombre</label>
                     <input type="text" class="form__input" name="name" id="nameContact" placeholder="Indica tu nombre">
+                    <p class="form_p" id="nameContactError"></p>
 
-                    <label for="email" class="form__label" id="label-email">E-mail</label>
-                    <input type="email" class="form__input" name="email" id="emailContact"
-                        placeholder="nombre@email.com">
 
-                    <label for="msje" class="form__label" id="label-msje">Deja tu mensaje</label>
+                    <label for="emailContact" class="form__label" id="label-email">E-mail</label>
+                    <input type="email" class="form__input" name="email" id="emailContact" placeholder="nombre@email.com">
+                    <p class="form_p" id="emailContactError"></p>
+
+                    <label for="msjeContact" class="form__label" id="label-msje">Deja tu mensaje</label>
                     <textarea class="form__input" name=msje" id="msjeContact" placeholder="Tu mensaje"></textarea>
+                    <p class="form_p" id="msjeContactError"></p>
+
                 </div>
                 <div class="form_button-contact">
                     <button class="btn btn-s btn_primary-inverse" id="btnContact"> Enviar </button>
@@ -95,6 +99,6 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
+    <script src="../JS/contact.js" ></script>
 </body>
-
 </html>
