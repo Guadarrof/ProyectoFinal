@@ -446,7 +446,7 @@ input::-webkit-inner-spin-button {
      object-position: top;
   width: 100%;
 }
-.card_price {
+.card__price {
   text-align: end;
   font-family: "Lilita One", sans-serif;
   color: #FF2943;
@@ -772,6 +772,10 @@ textarea {
   flex-direction: row;
   align-items: center;
 }
+.about_img {
+  height: 338px;
+  width: 335px;
+}
 .about_card {
   display: flex;
   flex-direction: column;
@@ -921,4 +925,60 @@ textarea {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.product_container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 5% 10%;
+  margin: 6rem;
+}
+.product_img {
+  height: 338px;
+  width: 435px;
+  display: flex;
+  justify-content: center;
+}
+.product_img img {
+  height: 100%;
+}
+.product_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .product_content {
+    flex-direction: column;
+  }
+}
+.product_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product_card h1 {
+  font-family: "Bebas Neue";
+  color: #015F68;
+  margin-bottom: 0.5rem;
+}
+.product__price {
+  font-family: "Lilita One", sans-serif;
+  margin-bottom: 1.5rem;
+}
+.product__descript-short {
+  font-size: 23px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+.product_div-info {
+  margin-left: 1.5rem;
+}
+@media screen and (max-width: 1000px) {
+  .product_div-info {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

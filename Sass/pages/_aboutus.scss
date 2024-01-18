@@ -12,6 +12,10 @@
     flex-direction: row;
     align-items: center;
     }
+    &_img{
+        height: 338px;
+        width: 335px;
+    }
     &_card{
         display: flex;
         flex-direction: column;
